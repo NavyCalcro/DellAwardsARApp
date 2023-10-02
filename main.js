@@ -2,6 +2,10 @@ import { loadGLTF } from "../../libs/loader.js";
 //import { mockWithVideo } from '../../libs/camera-mock.js';
 const THREE = window.MINDAR.IMAGE.THREE;
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://yoursite.com");
+});
+
 document.addEventListener('DOMContentLoaded', () => {
    
     function hide() {
